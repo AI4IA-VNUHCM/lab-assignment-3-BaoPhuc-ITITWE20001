@@ -13,18 +13,31 @@ ______________________________________
 
 void Ex5(int arr[], int n){
 	//Your codes here
-	int a = 0;
-	for(int i = 0; i < n; i++)
-	{
-		if(arr[i] > 0)
-		printf("%d", arr[i]);
-		else {
-			arr[a] = arr[i];
-			a++;
-		}
-	}
-	for(int i = 0; i < a; i++)
-	printf("%d", arr[i]);
+	 int positive[n];
+    int negative[n];
+    int p_count = 0;
+    int n_count = 0;
+
+    for(int i = 0; i < n; i++){
+        if(arr[i] >= 0){
+            positive[p_count] = arr[i];
+            p_count +=1;
+        }else{
+            negative[n_count] = arr[i];
+            n_count +=1;
+        }
+    }
+
+    for(int i = 0; i < p_count; i++){
+        if(i == 0){
+            printf("%d", positive[i]);
+        }else{
+            printf(" %d", positive[i]);
+        }
+    }
+    for(int i = 0; i < n_count; i++){
+        printf(" %d", negative[i]);
+    }
 }
 
 int main(int argc, char *argv[]) {

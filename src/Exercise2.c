@@ -14,7 +14,15 @@ Ex:
 
 void Ex2(int arr[], int n){
 	//Your codes here
-	
+	int i, j;
+	for(i=0; i<n; i++){
+		if (arr[j] > arr[j-1])
+		{
+			int a = arr[j];
+			arr[j] = arr[j-1];
+			arr[j-1] = a;
+		}
+	}
 }
 
 int main(int argc, char *argv[]) {

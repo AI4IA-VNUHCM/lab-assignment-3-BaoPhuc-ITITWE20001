@@ -16,11 +16,11 @@ void Ex2(int arr[], int n){
 	//Your codes here
 	int i, j;
 	for(i=0; i<n; i++){
-		if (arr[j] > arr[j-1])
-		{
-			int a = arr[j];
-			arr[j] = arr[j-1];
-			arr[j-1] = a;
+		if((arr[i] % 2 == 0) && (arr[j] % 2 == 0) && (arr[i] < arr[j])){
+				int t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+			}
+			if((arr[i] % 2 != 0) && (arr[j] % 2 != 0) && (arr[i] > arr[j])){
+				int t = arr[i]; arr[i] = arr[j]; arr[j] = t;
 		}
 	}
 }

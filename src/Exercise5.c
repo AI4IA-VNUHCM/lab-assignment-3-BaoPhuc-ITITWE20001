@@ -13,18 +13,18 @@ ______________________________________
 
 void Ex5(int arr[], int n){
 	//Your codes here
-	int a = 0, ne[n];
+	int a = 0;
 	for(int i = 0; i < n; i++)
 	{
 		if(arr[i] > 0)
 		printf("%d", arr[i]);
 		else {
-			ne[a] = arr[i];
+			arr[a] = arr[i];
 			a++;
 		}
 	}
 	for(int i = 0; i < a; i++)
-	printf("%d", ne[i]);
+	printf("%d", arr[i]);
 }
 
 int main(int argc, char *argv[]) {

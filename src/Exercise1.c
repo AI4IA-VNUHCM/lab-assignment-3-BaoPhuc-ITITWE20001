@@ -18,8 +18,9 @@ void Ex1(int arr[], int n){
 	int syn = 1;
 
 	for (i=0, j = n - 1; (i <= floor((n-1) / 2)) && (j>= ceil((n-1) / 2)); i++, j--)
-        if(((arr[i] < arr[i+1]) && (arr[j] > arr[j-1])) || ((arr[i] > arr[i+1]) && (arr[j] < arr[j-1])));
-	 
+    {
+		if(arr[j] != arr[i]) syn = 0;
+	}
     if (syn == 0)
 	printf("asymmetric");
 	else 
